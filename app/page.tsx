@@ -16,16 +16,43 @@ import { SidebarMenu } from "@/components/sidebar-menu"
 import { Package, ArrowLeft } from 'lucide-react';
 
 const programs = [
-  { name: "Visual Studio Code", wingetId: "Microsoft.VisualStudioCode", category: "Development" },
-  { name: "Google Chrome", wingetId: "Google.Chrome", category: "Web Browsers" },
-  { name: "Mozilla Firefox", wingetId: "Mozilla.Firefox", category: "Web Browsers" },
   { name: "7-Zip", wingetId: "7zip.7zip", category: "Utilities" },
-  { name: "VLC Media Player", wingetId: "VideoLAN.VLC", category: "Multimedia" },
-  { name: "Node.js", wingetId: "OpenJS.NodeJS", category: "Development" },
+  { name: "Clink", wingetId: "chrisant996.Clink", category: "Utilities" },
+  { name: "Cursor.ai", wingetId: "Anysphere.Cursor", category: "Development" },
+  { name: "Docker Desktop", wingetId: "Docker.DockerDesktop", category: "Development" },
+  { name: "Everything", wingetId: "voidtools.Everything", category: "Utilities" },
+  { name: "ExplorerPatcher", wingetId: "valinet.ExplorerPatcher.Prerelease", category: "Utilities" },
+  { name: "GeForce Now", wingetId: "Nvidia.GeForceNow", category: "Gaming" },
   { name: "Git", wingetId: "Git.Git", category: "Development" },
-  { name: "Notepad++", wingetId: "Notepad++.Notepad++", category: "Development" },
-  { name: "Steam", wingetId: "Valve.Steam", category: "Gaming" },
-  { name: "Discord", wingetId: "Discord.Discord", category: "Communication" },
+  { name: "GitHub Desktop", wingetId: "GitHub.GitHubDesktop", category: "Development" },
+  { name: "Glary Utilities", wingetId: "Glarysoft.GlaryUtilities", category: "Utilities" },
+  { name: "Google Chrome", wingetId: "Google.Chrome", category: "Web Browsers" },
+  { name: "Google Drive", wingetId: "Google.GoogleDrive", category: "Utilities" },
+  { name: "Mica For Everyone", wingetId: "MicaForEveryone.MicaForEveryone", category: "Utilities" },
+  { name: "Microsoft .NET 3.1", wingetId: "Microsoft.DotNet.DesktopRuntime.3_1", category: "System" },
+  { name: "Microsoft .NET 5", wingetId: "Microsoft.DotNet.DesktopRuntime.5", category: "System" },
+  { name: "Microsoft .NET 6", wingetId: "Microsoft.DotNet.Runtime.6", category: "System" },
+  { name: "Microsoft .NET 7", wingetId: "Microsoft.DotNet.DesktopRuntime.7", category: "System" },
+  { name: "Microsoft .NET 8", wingetId: "Microsoft.DotNet.DesktopRuntime.8", category: "System" },
+  { name: "Microsoft Paint", wingetId: "9PCFS5B6T72H", category: "Utilities" },
+  { name: "Microsoft PC Manager", wingetId: "Microsoft.PCManager", category: "Utilities" },
+  { name: "Microsoft Photos", wingetId: "9WZDNCRFJBH4", category: "Utilities" },
+  { name: "Microsoft Capture", wingetId: "9MZ95KL8MR0L", category: "Utilities" },
+  { name: "Microsoft Visual C++ 2015-2022", wingetId: "Microsoft.VCRedist.2015+.x64", category: "System" },
+  { name: "Nilesoft Shell", wingetId: "Nilesoft.Shell", category: "Utilities" },
+  { name: "Obsidian", wingetId: "Obsidian.Obsidian", category: "Utilities" },
+  { name: "OhMyPosh", wingetId: "JanDeDobbeleer.OhMyPosh", category: "Utilities" },
+  { name: "Password Manager SafeInCloud", wingetId: "9NLXL1B6J7LW", category: "Utilities" },
+  { name: "PowerShell", wingetId: "Microsoft.PowerShell", category: "Utilities" },
+  { name: "PowerToys", wingetId: "Microsoft.PowerToys", category: "Utilities" },
+  { name: "VLC", wingetId: "VideoLAN.VLC", category: "Multimedia" },
+  { name: "Visual Studio Code", wingetId: "Microsoft.VisualStudioCode", category: "Development" },
+  { name: "Windows Calculator", wingetId: "9WZDNCRFHVN5", category: "Utilities" },
+  { name: "Windows Media Playe", wingetId: "9WZDNCRFJ3PT", category: "Multimedia" },
+  { name: "Windows Notepad", wingetId: "9MSMLRH6LZF3", category: "Utilities" },
+  { name: "Windows Terminal", wingetId: "Microsoft.WindowsTerminal", category: "Utilities" },
+  { name: "Windhawk", wingetId: "RamenSoftware.Windhawk", category: "Utilities" },
+  { name: "WizTree", wingetId: "AntibodySoftware.WizTree", category: "Utilities" },
 ];
 
 const WINGET_ARGS = "--silent --accept-source-agreements --accept-package-agreements";
@@ -35,7 +62,7 @@ export default function Home() {
   const [selectedPrograms, setSelectedPrograms] = useState<string[]>([]);
   const [mounted, setMounted] = useState(false)
   const [sidebarExpanded, setSidebarExpanded] = useState(false)
-  const [currentView, setCurrentView] = useState<'programs' | 'categories'>('programs')
+  const [currentView, setCurrentView] = useState<'programs' | 'categories'>('categories')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
 
   useEffect(() => {

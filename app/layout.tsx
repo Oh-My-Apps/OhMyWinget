@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Winget Installer SaaS',
+  title: 'Winget Installer',
   description: 'Easily find and install Windows programs using winget',
 };
 
